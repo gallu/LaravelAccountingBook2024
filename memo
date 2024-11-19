@@ -1,0 +1,15 @@
+出納帳テーブル accounting_books
+	ID		id
+	日付		accounting_at
+	ことがら	subject	VARCHAR
+	詳細		detail	TEXT
+
+出納帳入金テーブル		accounting_book_deposits
+	ID				id
+	出納帳ID			accounting_book_id
+	入金額			deposit_amount
+
+出納帳出金テーブル		accounting_book_withdrawals
+	ID				id
+	出納帳ID			accounting_book_id
+	出金額			withdrawal_amount
