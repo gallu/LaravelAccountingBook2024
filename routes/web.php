@@ -12,7 +12,7 @@ Route::post('/login', [HomeController::class, 'login'])->name('login');
 
 // 認可された状態
 Route::middleware(['auth'])->group(function () {
-	Route::get('/top', [HomeController::class, 'top'])->name('top');
+	Route::get('/top', [AccountingBookController::class, 'top'])->name('top');
 	// 入金登録
 	Route::post('/deposit', [AccountingBookController::class, 'deposit'])->name('deposit');
 	// 出金登録

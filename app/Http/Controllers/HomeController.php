@@ -10,14 +10,8 @@ class HomeController extends Controller
 {
     //
 	public function index() {
-		// return view('welcome');
+		\Log::debug('XXXXX test XXXXX');
 		return view('index');
-	}
-
-	public function top() {
-		// echo "top";
-		// var_dump( Auth::user()->toArray() );
-		return view('top');
 	}
 
 	public function login(UserLoginRequest $req) {

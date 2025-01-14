@@ -14,7 +14,7 @@ return new class extends Migration
 		// 出納帳テーブル
         Schema::create('accounting_books', function (Blueprint $table) {
             $table->id();
-			// XXX user_id
+			$table->foreignId('user_id')->constrained();
 			$table->date('accounting_at')->comment('入出金日');
 			$table->string('subject', length: 255)->comment('科目');
 			$table->text('detail')->comment('詳細/めも');
